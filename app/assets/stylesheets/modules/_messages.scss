@@ -19,6 +19,12 @@
         height: 20px;
         width: 260px;
         background-color: #d8d8d8;
+        display: flex;
+        justify-content: space-between;
+        line-height: 20px;
+        &__icons {
+          width: 60px;
+        }
       }
     }
   }
