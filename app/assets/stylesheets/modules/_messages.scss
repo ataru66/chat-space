@@ -10,6 +10,17 @@
   &__header {
     height: 100px;
     background-color: #253141;
+    &__box {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .top-items {
+        height: 20px;
+        width: 260px;
+        background-color: #d8d8d8;
+      }
+    }
   }
   &__group-list {
     height: calc(100vh - 100px);
