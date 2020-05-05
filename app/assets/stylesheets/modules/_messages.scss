@@ -27,8 +27,10 @@
           font-weight: bold;
         }
         &__icons {
+          width: 60px;
           list-style: none;
           display: flex;
+          justify-content: flex-end;
           &__icon {
             margin-left: 5px;
             a {
