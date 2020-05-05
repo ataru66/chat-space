@@ -25,6 +25,13 @@
         &__icons {
           list-style: none;
           display: flex;
+          &__icon {
+            margin-left: 5px;
+            a {
+              text-decoration: none;
+              color: #ffffff;
+            }
+          }
         }
       }
     }
