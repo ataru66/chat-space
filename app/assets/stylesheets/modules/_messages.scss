@@ -108,6 +108,9 @@
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
     padding: 35px 40px;
+    &__message-box {
+      margin-bottom: 46px;
+    }
   }
   &__message-form {
     height: 90px;
