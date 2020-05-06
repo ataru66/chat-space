@@ -113,6 +113,20 @@
       &__info {
         margin-bottom: 15px;
         display: flex;
+        &__member-name {
+          font-size: 16px;
+          color: #333333;
+        }
+        &__date-and-time {
+          font-size: 12px;
+          color: #999999;
+          margin-left: 5px;
+        }
+      }
+      &__messages {
+        font-size: 14px;
+        color: #434a54;
+      }
     }
   }
   &__message-form {
