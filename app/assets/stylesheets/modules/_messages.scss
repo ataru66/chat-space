@@ -77,6 +77,11 @@
     justify-content: space-between;
     &__group-info {
       padding: 35px 0 0 40px;
+      &__group-name {
+        margin-bottom: 15px;
+        font-size: 20px;
+        color: #333333;
+      }
   }
   &__message-list {
     height: calc(100vh - 100px - 90px);
