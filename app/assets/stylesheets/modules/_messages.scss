@@ -110,6 +110,9 @@
     padding: 35px 40px;
     &__message-box {
       margin-bottom: 46px;
+      &__info {
+        margin-bottom: 15px;
+        display: flex;
     }
   }
   &__message-form {
