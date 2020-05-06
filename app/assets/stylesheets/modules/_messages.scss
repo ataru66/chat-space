@@ -53,10 +53,10 @@
       text-decoration: none;
       color: $white;
     }
-    .groups {
+    &__group {
       padding: 20px 20px 0;
       margin-bottom: 40px;
-      &__name {
+      &__group-name {
         font-size: 15px;
         margin-bottom: 5px;
       }
