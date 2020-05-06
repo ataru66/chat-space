@@ -75,6 +75,8 @@
     border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
+    &__group-info {
+      padding: 35px 0 0 40px;
   }
   &__message-list {
     height: calc(100vh - 100px - 90px);
