@@ -33,6 +33,7 @@
     %form.chat-main__message-form__form-box
       .chat-main__message-form__form-box__message-box
         %input{type: "text", placeholder: "type a message", class: 'chat-main__message-form__form-box__message-box__form'}
+        %label
           = icon('fas', 'image')
           %input{type: "file", class: 'chat-main__message-form__form-box__message-box__file-select'}
       %input{type: "submit", value: "Send", class: 'chat-main__message-form__form-box__send-btn'}
