@@ -82,6 +82,16 @@
         font-size: 20px;
         color: #333333;
       }
+      &__member-list {
+        font-size: 12px;
+        color: #999999;
+        list-style: none;
+        display: flex;
+        &__member {
+          margin-left: 3px;
+        }
+      }
+    }
   }
   &__message-list {
     height: calc(100vh - 100px - 90px);
