@@ -3,13 +3,13 @@
     .side-bar__header__box
       .side-bar__header__box__items
         %p.side-bar__header__box__items__name
-          name
+          = current_user.name
         %ul.side-bar__header__box__items__icons
           %li.side-bar__header__box__items__icons__icon
             = link_to "#" do
               %i.far.fa-edit
           %li.side-bar__header__box__items__icons__icon
-            = link_to "#" do
+            = link_to edit_user_path(current_user) do
               %i.fas.fa-cog
   .side-bar__group-list
     = link_to "#" do
