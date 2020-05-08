@@ -131,6 +131,10 @@
       &__messages {
         font-size: 14px;
         color: $black;
+        &__image {
+          height: 150px;
+          width: auto;
+        }
       }
     }
   }
