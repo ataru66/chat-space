@@ -5,8 +5,6 @@
         chatspace
       %ul.chat-main__header__group-info__member-list
         Member :
-        %li.chat-main__header__group-info__member-list__member
-          a
         - @group.users.each do |user|
           %li.chat-main__header__group-info__member-list__member
             = user.name
