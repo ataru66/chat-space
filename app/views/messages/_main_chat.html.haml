@@ -2,7 +2,7 @@
   .chat-main__header
     .chat-main__header__group-info
       .chat-main__header__group-info__group-name
-        chatspace
+        = @group.name
       %ul.chat-main__header__group-info__member-list
         Member :
         - @group.users.each do |user|
