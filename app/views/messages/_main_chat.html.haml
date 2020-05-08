@@ -13,22 +13,7 @@
       .edit-btn
         Edit
   .chat-main__message-list
-    .chat-main__message-list__message-box
-      .chat-main__message-list__message-box__info
-        .chat-main__message-list__message-box__info__member-name
-          name
-        .chat-main__message-list__message-box__info__date-and-time
-          2020/05/05(Tue) 12:00:52
-      .chat-main__message-list__message-box__messages
-        Hello
-    .chat-main__message-list__message-box
-      .chat-main__message-list__message-box__info
-        .chat-main__message-list__message-box__info__member-name
-          name
-        .chat-main__message-list__message-box__info__date-and-time
-          2020/05/06(Wed) 21:41:17
-      .chat-main__message-list__message-box__messages
-        good evening
+    = render partial: "message", collection: @messages
   .chat-main__message-form
     %form.chat-main__message-form__form-box
       .chat-main__message-form__form-box__message-box
