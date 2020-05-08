@@ -6,21 +6,16 @@
           = current_user.name
         %ul.side-bar__header__box__items__icons
           %li.side-bar__header__box__items__icons__icon
-            = link_to "#" do
+            = link_to new_group_path do
               %i.far.fa-edit
           %li.side-bar__header__box__items__icons__icon
             = link_to edit_user_path(current_user) do
               %i.fas.fa-cog
   .side-bar__group-list
-    = link_to "#" do
-      .side-bar__group-list__group
-        %p.side-bar__group-list__group__group-name
-          teckcamp
-        %p.side-bar__group-list__group__messages
-          まだメッセージがありません
-    = link_to "#" do
-      .side-bar__group-list__group
-        %p.side-bar__group-list__group__group-name
-          chatspace
-        %p.side-bar__group-list__group__messages
-          まだメッセージがありません
+    - current_user.groups.each do |group|
+      = link_to "#" do
+        .side-bar__group-list__group
+          %p.side-bar__group-list__group__group-name
+            = group.name
+          %p.side-bar__group-list__group__messages
+            まだメッセージがありません
