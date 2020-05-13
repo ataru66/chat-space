@@ -13,5 +13,9 @@ $(function() {
       processData: false,
       contentType: false
     })
+    .done(function(message) {
+      var html = buildHTML(message);
+      $('.chat-main__message-list').append(html);
+    })
   })
 });
