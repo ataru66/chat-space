@@ -1,5 +1,31 @@
 $(function() {
 
+  // 関数定義
+  function buildHTML(message){
+    if (message.content && message.image) {
+      var html = `${templateHTML(message)}
+                    <div class="chat-main__message-list__message-box__messages">
+                      <p class="chat-main__message-list__message-box__messages__content">
+                        ${message.content}
+                      </p>
+                      <img class="chat-main__message-list__message-box__messages__image" src=${message.image}>
+                    </div>
+                  </div>`
+    } else if (message.content) {
+      var html = `${templateHTML(message)}
+                    <div class="chat-main__message-list__message-box__messages">
+                      <p class="chat-main__message-list__message-box__messages__content">
+                        ${message.content}
+                      </p>
+                    </div>
+                  </div>`
+    } else if (message.image) {
+      var html = `${templateHTML(message)}
+                    <div class="chat-main__message-list__message-box__messages">
+                      <img class="chat-main__message-list__message-box__messages__image" src=${message.image}>
+                    </div>
+                  </div>`
+    }
   // メッセージ送信時の処理
   $('#new_message').on('submit', function(e){
     e.preventDefault();
