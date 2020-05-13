@@ -1,6 +1,19 @@
 $(function() {
 
   // 関数定義
+  function templateHTML(message){
+    var template_html= `<div class="chat-main__message-list__message-box">
+                          <div class="chat-main__message-list__message-box__info">
+                            <div class="chat-main__message-list__message-box__info__member-name">
+                              ${message.user_name}
+                            </div>
+                            <div class="chat-main__message-list__message-box__info__date-and-time">
+                              ${message.created_at}
+                            </div>
+                          </div>`
+    return (template_html);
+  }
+
   function buildHTML(message){
     if (message.content && message.image) {
       var html = `${templateHTML(message)}
