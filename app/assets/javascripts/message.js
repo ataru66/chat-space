@@ -40,7 +40,12 @@ $(function() {
                   </div>`
     }
     return html;
-  };
+  }
+
+  function resetSubmit(){
+    $('.chat-main__message-form__form-box__send-btn').prop('disabled', false);
+  }
+
   // メッセージ送信時の処理
   $('#new_message').on('submit', function(e){
     e.preventDefault();
