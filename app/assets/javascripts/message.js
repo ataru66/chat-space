@@ -75,6 +75,7 @@ $(function() {
   })
 
   var reloadMessages = function() {
+    var last_message_id = $('.chat-main__message-list__message-box:last').data("message-id");
   }
 
 });
