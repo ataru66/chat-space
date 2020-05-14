@@ -73,4 +73,8 @@ $(function() {
       resetSubmit();
     })
   })
+
+  var reloadMessages = function() {
+  }
+
 });
