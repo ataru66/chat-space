@@ -2,7 +2,7 @@ $(function() {
 
   // 関数定義
   function templateHTML(message){
-    var template_html= `<div class="chat-main__message-list__message-box">
+    var template_html= `<div class="chat-main__message-list__message-box" data-message-id="${message.id}">
                           <div class="chat-main__message-list__message-box__info">
                             <div class="chat-main__message-list__message-box__info__member-name">
                               ${message.user_name}
@@ -73,4 +73,31 @@ $(function() {
       resetSubmit();
     })
   })
+
+  var reloadMessages = function() {
+    var last_message_id = $('.chat-main__message-list__message-box:last').data("message-id");
+    $.ajax({
+      url: "api/messages",
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      if (messages.length !== 0) {
+        var insertHTML = '';
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message);
+        });
+        $('.chat-main__message-list').append(insertHTML);
+        $('.chat-main__message-list').animate({scrollTop: $('.chat-main__message-list')[0].scrollHeight});
+      }
+    })
+    .fail(function() {
+      alert('error');
+    });
+  }
+
+  if (document.location.href.match(/\/groups\/\d+\/messages/)){
+    setInterval(reloadMessages, 7000);
+  }
 });
